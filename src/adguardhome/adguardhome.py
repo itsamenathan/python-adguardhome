@@ -18,6 +18,7 @@ from .querylog import AdGuardHomeQueryLog
 from .safebrowsing import AdGuardHomeSafeBrowsing
 from .safesearch import AdGuardHomeSafeSearch
 from .stats import AdGuardHomeStats
+from .blockservices import AdGuardHomeBlockServices
 
 
 # pylint: disable=too-many-instance-attributes
@@ -81,6 +82,7 @@ class AdGuardHome:
         self.safebrowsing = AdGuardHomeSafeBrowsing(self)
         self.safesearch = AdGuardHomeSafeSearch(self)
         self.stats = AdGuardHomeStats(self)
+        self.blockservices = AdGuardHomeBlockServices(self)
 
     # pylint: disable=too-many-arguments
     async def request(
